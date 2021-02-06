@@ -92,16 +92,6 @@ public class Main {
  
     public static String getBinaryString(int num) {
         String equivalentBinary = "";
-//        int bitmask = 1;
-//        for (int i = 31; i >= 0; i--) {
-//            int masked = bitmask << i;
-//            if (a < 0 && i == 31) { // If it is negative number, make MSB to 1
-//                equivalentBinary += "1";
-//            } else {
-//                equivalentBinary += (a & masked) > 0 ? "1" : "0";
-//            }
-//        }
-        // As discussed, starting with lower bits so that we can eliminate leading zeroes in higher bits
         int bitmask = 1;
         for (int i = 0; i < 32 && num != 0; i++) {
             equivalentBinary = (num & bitmask) + equivalentBinary;
